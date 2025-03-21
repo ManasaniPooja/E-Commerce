@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracking</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/tracking.css">
+    <style>
+        body {
+            background-color: #add8e6; /* Light blue background color */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        .amazon-header {
+            background-color: #4a90e2; /* Header background color */
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding */
+        }
+
+        .logo {
+            width: 80px; /* Smaller logo size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .amazon-mobile-logo {
+            width: 60px; /* Smaller mobile logo size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .search-button {
+            background-color: #FFA41C; /* Button background color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Padding */
+            cursor: pointer; /* Pointer cursor */
+            color: white; /* Text color */
+        }
+
+        .search-button:hover {
+            background-color: #FF8C00; /* Button hover color */
+        }
+
+        .main {
+            padding: 20px; /* Add padding to main content */
+        }
+
+        .order-tracking {
+            background-color: white; /* Background for tracking section */
+            border-radius: 5px; /* Rounded corners */
+            padding: 20px; /* Padding */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+            margin-top: 20px; /* Margin from top */
+        }
+
+        .back-to-orders-link {
+            display: block; /* Make it a block element */
+            margin-bottom: 15px; /* Margin below the link */
+            color: #007185; /* Link color */
+            text-decoration: underline; /* Underline link */
+        }
+
+        .delivery-date {
+            font-weight: bold; /* Bold text */
+            margin-bottom: 10px; /* Margin below */
+        }
+
+        .product-info {
+            margin-bottom: 10px; /* Margin below each product info */
+        }
+
+        .product-image {
+            width: 100px; /* Set a fixed width for product images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 15px 0; /* Margin above and below */
+        }
+
+        .progress-labels-container {
+            display: flex; /* Flexbox layout */
+            justify-content: space-between; /* Space between labels */
+            margin-top: 20px; /* Margin above */
+        }
+
+        .progress-label {
+            flex: 1; /* Equal space for each label */
+            text-align: center; /* Center text */
+        }
+
+        .current-status {
+            font-weight: bold; /* Bold text for current status */
+            color: #28a745; /* Green color for current status */
+        }
+
+        .progress-bar-container {
+            background-color: #e0e0e0; /* Background for progress bar */
+            border-radius: 5px; /* Rounded corners */
+            height: 10px; /* Height of the progress bar */
+            margin-top: 10px; /* Margin above */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .progress-bar {
+            background-color: #28a745; /* Green color for progress */
+            height: 100%; /* Full height */
+            width: 66%; /* Set width based on progress (example: 66% for shipped) */
+        }
+    </style>
+</head>
+<body>
+    <div class="amazon-header">
+        <div class="amazon-header-left-section">
+            <a href="webpage.html" class="header-link">
+                <img class="logo" src="https://th.bing.com/th/id/OIP.TPrkEtyfTnELuYlJIWaIIwHaHa?rs=1&pid=
+                ImgDetMain" alt="New Logo"> <!-- Updated logo -->
+                <img class="amazon-mobile-logo" src="images/new-mobile-logo.png" alt="New Mobile Logo"> <!-- Updated mobile logo -->
+            </a>
+        </div>
+
+        <div class="amazon-header-middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+
+            <button class="search-button">
+                <img class="search-icon" src="images/icons/search-icon.png" alt="Search Icon">
+            </button>
+        </div>
+
+        <div class="amazon-header-right-section">
+            <a class="orders-link header-link" href="orders.html">
+                <span class="returns-text">Returns</span>
+                <span class="orders-text">& Orders</span>
+            </a>
+
+            <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="images/icons/cart-icon.png" alt="Cart Icon">
+                <div class="cart-quantity">3</div>
+                <div class="cart-text">Cart</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="order-tracking">
+            <a class="back-to-orders-link link-primary" href="orders.html">
+                View all orders
+            </a>
+
+            <div class="delivery-date">
+                Arriving on Monday, June 13
+            </div>
+
+            <div class="product-info">
+                Black and Gray Athletic Cotton Socks - 6 Pairs
+            </div>
+
+            <div class="product-info">
+                Quantity: 1
+            </div>
+
+            <img class="product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg" alt="Black and Gray Athletic Cotton Socks">
+
+            <div class="progress-labels-container">
+                <div class="progress-label">
+                    Preparing
+                </div>
+                <div class="progress-label current-status">
+                    Shipped
+                </div>
+                <div class="progress-label">
+                    Delivered
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 66%;"></div> <!-- Set width based on progress -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

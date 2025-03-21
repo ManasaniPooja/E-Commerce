@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/amazon-header.css">
+    <link rel="stylesheet" href="styles/pages/amazon.css">
+    <style>
+        body {
+            background-color: #add8e6; /* Change background color to light blue */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+        }
+
+        .amazon-header {
+            background-color: #4a90e2; /* Change header background color */
+            color: white; /* Change text color */
+            padding: 10px 20px; /* Add padding */
+        }
+
+        .search-button {
+            background-color: #febd69; /* Change button background color */
+            border: none; /* Remove border */
+            padding: 10px; /* Add padding */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .search-button:hover {
+            background-color: #f3a847; /* Change button color on hover */
+        }
+
+        .header-link {
+            color: white; /* Change link color */
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-quantity {
+            background-color: red; /* Change cart quantity background color */
+            color: white; /* Change cart quantity text color */
+            border-radius: 50%; /* Make it circular */
+            padding: 2px 6px; /* Add padding */
+            margin-left: 5px; /* Add margin */
+        }
+
+        .auth-buttons {
+            display: flex; /* Flexbox for alignment */
+            margin-left: 20px; /* Margin for spacing */
+        }
+
+        .auth-button {
+            background-color: #febd69; /* Button background color */
+            border: none; /* Remove border */
+            padding: 8px 12px; /* Add padding */
+            margin-left: 10px; /* Space between buttons */
+            cursor: pointer; /* Pointer cursor */
+            color: #232f3e; /* Text color */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .auth-button:hover {
+            background-color: #f3a847; /* Button hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="amazon-header">
+        <div class="amazon-header-left-section">
+            <a href="webpage.html" class="header-link">
+                <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png" alt="Alternative Logo"> <!-- Keep alternative logo -->
+            </a>
+        </div>
+
+        <div class="amazon-header-middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+
+            <button class="search-button">
+                <img class="search-icon" src="images/icons/search-icon.png" alt="Search Icon">
+            </button>
+        </div>
+
+        <div class="amazon-header-right-section">
+            <a class="orders-link header-link" href="orders.html">
+                <span class="returns-text">Returns</span>
+                <span class="orders-text">& Orders</span>
+            </a>
+
+            <a class="cart-link header-link" href="checkout.html">
+                <img class="cart-icon" src="images/icons/cart-icon.png" alt="Cart Icon">
+                <div class="cart-quantity js-cart-quantity">0</div>
+                <div class="cart-text">Cart</div>
+            </a>
+
+            <div class="auth-buttons">
+                <button class="auth-button" onclick="window.location.href='signin.html'">Sign In</button>
+                <button class="auth-button" onclick="window.location.href='signup.html'">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="products-grid js-products-grid">
+            <!-- Product cards will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script src="data/cart.js"></script>
+    <script src="data/products.js"></script>
+    <script src="scripts/amazon.js"></script>
+</body>
+</html>
